@@ -1,3 +1,10 @@
+/*
+ * Created with Sublime Text (buidl 3031).
+ * User: soncy
+ * Date: 2013-05-04
+ * Time: 22:39:26
+ * Contact: http://www.qifendi.com
+ */
 require('date-utils');
 
 var argv = process.argv;
