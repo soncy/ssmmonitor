@@ -30,11 +30,11 @@
 直接下载 <https://github.com/soncy/ssmmonitor/archive/master.zip> ，解压后执行 `git 安装`里的步骤即可
 
 
-### 说明
+## 说明
 
 邮件的发送地址会是 `servername@ssmmonitor.soncy`，其中`servername`为各监控脚本中定义的`name`，如`directspace.net.js`中的 `name: 'Directspace',`
 
-### 贡献代码
+## 贡献代码
 
 你可以基于ssmmonitor开发自己想要监控的服务商页面，只需要新建一个`yourserver.js`，代码参考`directspace.net.js`或者`buyvm.net.js`即可。
 
