@@ -46,7 +46,7 @@
 	
 	ssmmonitor.start(config);
 
-** config说明: **
+**config说明:**
 
 	var config = {
     	name: 'Directspace', // 监控服务商名称 
