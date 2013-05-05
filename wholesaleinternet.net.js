@@ -10,7 +10,7 @@ var ssmmonitor = require('./lib/ssmmonitor'),
     $ = require('jquery').create();
 
 var config = {
-    name: '19刀', 
+    name: 'wholesaleinternet', 
     url: 'https://www.wholesaleinternet.net/dedicated/',
     interval: 60,
     checkFunc: function(data) {
