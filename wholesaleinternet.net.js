@@ -12,7 +12,7 @@ var ssmmonitor = require('./lib/ssmmonitor'),
 var config = {
     name: 'wholesaleinternet', 
     url: 'https://www.wholesaleinternet.net/dedicated/',
-    interval: 60,
+    interval: 120,
     checkFunc: function(data) {
         return checkAvailable(data);
     },
@@ -20,14 +20,16 @@ var config = {
 };
 
 function checkAvailable(data) {
-    var html = $(data),
-        pricearea = html.find('.pricearea');
+    var $html = $(data),
+        $pricearea = $html.find('.pricearea');
 
     for (var i = 0; i < 3; i++) { // 判断两个19刀和一个20刀
-        if (!(~pricearea.html().indexOf('Out Of Stock'))) {
+        if (!(~$pricearea.html().indexOf('Out Of Stock'))) {
             return true;
         }
     }
+
+    $html = $pricearea = null;
 }
 
 ssmmonitor.start(config);
