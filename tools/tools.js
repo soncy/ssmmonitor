@@ -5,7 +5,6 @@
  * Time: 22:39:26
  * Contact: http://www.qifendi.com
  */
-require('date-utils');
 
 var argv = process.argv;
 
@@ -38,5 +37,13 @@ module.exports.log = function() {
     for (var i = 0, len = arguments.length; i < len; i++){
         r.push(arguments[i]);
     }
-    console.log(Date.today().toFormat('YYYY-MM-DD HH:MI --->'), r.join(' '));
+    console.log(nowTime(), r.join(' '));
+}
+
+function nowTime() {
+    var d = new Date(),
+        date = [d.getFullYear(), d.getMonth(), d.getDate()].join('-'),
+        time = [d.getHours(), d.getMinutes(), d.getMinutes()].join(':');
+
+    return date + ' ' + time;
 }
