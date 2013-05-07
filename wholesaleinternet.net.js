@@ -24,7 +24,10 @@ function checkAvailable(data) {
         $pricearea = $html.find('.pricearea');
 
     for (var i = 0; i < 3; i++) { // 判断两个19刀和一个20刀
-        if (!(~$pricearea.html().indexOf('Out Of Stock'))) {
+        var text = $pricearea.find('.price').html(),
+            price = /(.*?)(\d+)(.*?)/.exec(text)[2];
+            
+        if (!(~$pricearea.html().indexOf('Out Of Stock')) && (price == 19 || price == 20 )) {
             return true;
         }
     }
