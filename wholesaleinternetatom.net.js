@@ -15,7 +15,7 @@ var config = {
     checkFunc: function(data) {
         return checkAvailable(data);
     },
-    mailSubject: '19刀有货啦'
+    mailSubject: '19刀atom有货啦'
 };
 
 function checkAvailable(data) {
